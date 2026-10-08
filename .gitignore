@@ -1,0 +1,6 @@
+build/
+rogex-core/target/
+__pycache__/
+*.pyc
+.env
+.env.local

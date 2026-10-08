@@ -1,0 +1,18 @@
+# echOS 2.1 local package index — ISO /media/epk
+# No remote repository. epk reads this catalog (mirrored in-kernel).
+Format: EPK1
+Media: /media/epk
+Kernel: shared Heap-0
+
+echos-base    2.0.0  all       kernel + Heap-0 + ROSH + epk
+echos-shell   2.0.0  all       doas rcctl pfctl disk tools
+echos-cli     2.0.0  complete,server  extended CLI suite
+echos-dev     2.0.0  complete  compilers / interpreters (text)
+echos-diag    2.0.0  complete,server  echofetch memtest
+echos-npu     2.0.0  edge      Akida AKD1000 SNN runtime
+echos-io      2.0.0  edge      static I/O drivers
+echos-net     2.0.0  server    async bare-metal network
+echos-httpd   2.0.0  server    native HTTP daemon
+echos-ftpd    2.0.0  server    native FTP daemon
+echos-sshd    2.0.0  server    native SSH daemon
+echos-pqc     2.0.0  server    ROGEX-PQC tunnel

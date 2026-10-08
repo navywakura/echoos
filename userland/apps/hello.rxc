@@ -1,0 +1,10 @@
+app "Hello"
+state visits is 1
+page home:
+  title "Hello from rgx://hello"
+  text "This page is served by Roxenite from RXFS."
+  text "Edit it in the Editor, Save, then: go rgx://hello"
+  value visits
+  button "Count a visit":
+    add 1 to visits
+  button "Read the Laws" opens "rgx://laws"

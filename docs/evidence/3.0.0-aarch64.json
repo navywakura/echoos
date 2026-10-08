@@ -1,0 +1,319 @@
+{
+  "checks": [
+    {
+      "detail": "",
+      "name": "image_present",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "arm64_boot_header",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "text_offset_matches_link",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_boot_stage",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_heap0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_memory",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_interrupts_gic",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_timer",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_mono_clock",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_scheduler",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_seb",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_storage",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_rxfs",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_network",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_robot_runtime",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "boot_selftests_pass",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "dtb_parsed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "dtb_memory_size",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "status_arch",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "status_switches",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_vendor_arm",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_midr",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_sctlr",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_cntfrq",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_daif",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_ttbr0",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_elr_el1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_el1",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_mmu_on",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_align_check_off",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_irqs_unmasked",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cpu_cntfrq_sane",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "timer_advances",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "timer_rate_matches_claim",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "mono_advances",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "mono_agrees_with_timer",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seb_selftest",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seb_no_overruns",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_injected",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_balance_closes",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_abi_refused_the_malformed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_queue_dropped_the_burst",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_intents_made",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_gate_balance",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_gate_modified",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_gate_blocked",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_expired_counted",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_sent_matches_gate",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_latency_measured",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_latency_nonzero",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "robot_latency_ordered",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "rxfs_count_agrees_with_listing",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "net_driver",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "net_transport_known",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "net_dhcp_lease",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "net_gateway_replies",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "net_rtt_measured",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "halt",
+      "passed": true
+    }
+  ],
+  "clock": {
+    "hz": 100,
+    "mono_ms": [
+      15,
+      3020
+    ],
+    "ticks": [
+      2,
+      297
+    ],
+    "timer_ms": [
+      46,
+      3051
+    ]
+  },
+  "firmware": "none",
+  "green": true,
+  "phase": "CERT-G",
+  "robot": "scenario    injected 61 records\nrecords     accepted 50, refused 3\nintents     made 46, sent 47\ngate        seen 48, accepted 43, MODIFY 4, BLOCK 1\nqueues      sensor drops 8 (high water 32), gate drops 0, out drops 1\nbalance     61 injected = 50 accepted + 3 refused + 8 dropped\nexpired     1\nlatency     samples 47, p50 <127 us, p95 <255 us",
+  "robot_latency_us": {
+    "p50": 127,
+    "p95": 255,
+    "samples": 47
+  },
+  "subject": "aarch64"
+}

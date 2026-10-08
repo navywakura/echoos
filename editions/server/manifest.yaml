@@ -1,0 +1,31 @@
+# EchOS Server Edition — 2.0 Universal product line
+# Shared Heap-0 kernel. CLI only. Native daemons + ROGEX-PQC.
+
+name: "EchOS Server"
+edition: server
+version: 2.0.0
+kernel_flags: ["-DECHOS_EDITION_SERVER=1"]
+
+desktop:
+  enabled: false
+
+shell:
+  type: rosh
+  font: Liberation Mono
+  tools:
+    - epk
+    - echofetch
+    - doas
+    - rcctl
+    - pfctl
+    - disklabel
+    - coretools
+
+network:
+  stack: bare-metal-async
+  daemons: [httpd, ftpd, sshd]
+  pqc: rogex-pqc          # ML-KEM-768 + ChaCha20-Poly1305 tunnel
+
+packages:
+  channel: local          # /media/epk on the install medium only
+  manifest: server.manifest

@@ -1,0 +1,20 @@
+# echOS 2.1 — Server. rcctl flags exist; there is no httpd/sshd/ftpd process.
+edition: server
+name: echOS Server
+version: 2.1.0
+kernel: shared
+arch: [x86_64]
+font: Liberation Mono
+ram_budget_kb: 32768
+packages:
+  echos-base
+  echos-shell
+  echofetch
+  echos-diag
+  echos-net
+flags:
+  - httpd   # /etc/rc.conf.local only
+  - ftpd
+  - sshd
+  - pqc
+description: CLI + IPv4 client stack. Native daemons are postponed. rcctl writes flags.

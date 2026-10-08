@@ -1,0 +1,24 @@
+# EchOS Edge Edition manifest
+# Headless CLI-only line for IoT, robotics, drones, camera systems.
+# Kernel + Navi Mini (retrainable edge model). No desktop, no IDE.
+
+name: "EchOS Edge"
+edition: edge
+version: 1.0.0
+kernel_flags: ["-DECHOS_EDITION_EDGE=1"]
+
+desktop:
+  enabled: false          # CLI only
+
+shell:
+  type: rosh
+  tools:
+    - files               # unified file browser + native image/video viewer (no desktop needed)
+    - coretools           # packages/coretools: rg fd bat eza z unp dust duf hyperfine localsend
+
+ai:
+  engine: navi-mini       # minimum, retrainable Navi model for edge tasks
+  retrainable: true       # operator-supplied datasets via `navi teach`
+  backends: [cpu, npu-akida]
+
+targets: [iot, robotics, drones, cameras]

@@ -1,0 +1,12 @@
+app "About"
+page home:
+  title "RXos"
+  text "Experimental bare-metal OS by Roger Navarro."
+  text "Rogex Laboratories / Knights Labs — free software, GNU GPLv3."
+  text "Edit and share; not for closed products. Bugs real. PRs welcome."
+  text " "
+  text "https://www.rogexlaboratories.com/rx-os"
+  text "This page is a Roxenite (.rxc) app on rgx://about-app."
+  text "Stack: C + Rust no_std + NASM, GRUB/Multiboot2."
+  button "User Guide" opens "rgx://about"
+  button "Build a page" opens "rgx://guide"

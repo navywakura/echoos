@@ -1,0 +1,12 @@
+app "FileDemo"
+state opened is 0
+page home:
+  title "RXFS file demo"
+  text "This app lives in RXFS as file_demo.rxc."
+  text "Try the shell: ls | cat file_demo.rxc | copy file_demo.rxc d2.rxc"
+  text "Then: go rgx://d2  (the copy is served too)"
+  value opened
+  button "Bump the counter":
+    add 1 to opened
+  button "Reset":
+    set opened to 0

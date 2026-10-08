@@ -1,0 +1,24 @@
+# EchOS Minimal Edition manifest
+# Same desktop and drivers as Complete. No ECHO AI, no IDE. Built for daily use.
+
+name: "EchOS Minimal"
+edition: minimal
+version: 1.0.0
+kernel_flags: ["-DECHOS_EDITION_MINIMAL=1"]
+
+desktop:
+  shell: eclipse-shell
+  theme: eclipse-dark
+
+apps:
+  - browser          # Rogex Nova engine
+  - media-viewer
+  - terminal
+  - explorer
+  - settings
+
+ai:
+  enabled: false     # no Navi 10 runtime, no echo models in image
+
+packages:
+  channel: core

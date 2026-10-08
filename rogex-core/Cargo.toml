@@ -1,0 +1,47 @@
+[package]
+name    = "rogex-core"
+version = "0.1.0"
+edition = "2021"
+description = "Rogex OS no_std core: ML-KEM post-quantum handshake + mesh transport, linked into the C kernel."
+license = "MIT OR Apache-2.0"
+
+# Static library so the freestanding C kernel can link it directly, plus rlib
+# for host-side unit tests.
+[lib]
+name       = "rogex_core"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+# Post-quantum KEM: RustCrypto ML-KEM (FIPS 203), pure Rust + no_std. Optional
+# so the kernel can still build fully offline against the in-tree scaffold.
+ml-kem    = { version = "0.3", default-features = false, optional = true }
+# ml-kem takes an explicit RNG (no getrandom dependency on bare metal).
+rand_core = { version = "0.10", default-features = false, optional = true }
+# SHA3-256 for the hardware-identity UID and pseudonym binding (Phase 2). Pure
+# Rust, no_std, no cpufeatures (unlike poly1305) — ml-kem already uses it.
+sha3      = { version = "0.11", default-features = false, optional = true }
+
+# NOTE: ChaCha20-Poly1305 is implemented in-tree (aead.rs) rather than via the
+# RustCrypto `chacha20`/`poly1305` crates. Those pull `cpufeatures` (runtime
+# cpuid-based SIMD dispatch) which is inappropriate for a freestanding kernel
+# and, under `-C code-model=kernel`, currently crashes the compiler (SIGILL in
+# rustc while building poly1305). The hand-rolled RFC 8439 implementation is
+# pure integer math, has no such dependency, and is checked against the RFC's
+# official test vector at boot.
+
+[features]
+default = ["pqc"]
+# Real FIPS-203 ML-KEM-768 (crypto.rs::pqc) + SHA3 identity (identity.rs). The
+# AEAD (aead.rs) is always compiled. Disable PQC for the offline KEM scaffold:
+#   cargo build --no-default-features
+pqc = ["dep:ml-kem", "dep:rand_core", "dep:sha3"]
+
+[profile.release]
+panic           = "abort"   # no unwinding on bare metal
+opt-level       = "z"       # small: this is kernel-resident
+lto             = true
+codegen-units   = 1
+overflow-checks = false
+
+[profile.dev]
+panic = "abort"

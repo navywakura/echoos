@@ -1,0 +1,24 @@
+# echOS 2.1 — Complete (text). Toolchain is host-only (`epk list --lab`).
+edition: complete
+name: echOS Complete
+version: 2.1.0
+kernel: shared
+arch: [x86_64]
+font: Liberation Mono
+ram_budget_kb: 65536
+packages:
+  echos-base
+  echos-shell
+  echofetch
+  echos-diag
+  echos-net
+  echos-npu
+  echos-io
+  echos-akida
+commands:
+  - echofetch
+  - epk
+  - neurocpu
+  - prisma5
+  - bench-snn
+description: Same unikernel as Minimal plus SNN/Akida probe notes. Compilers are host + echlibc, not in-OS.

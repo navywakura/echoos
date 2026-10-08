@@ -1,0 +1,30 @@
+# echOS 2.1 — Edge (Akida AKD1000 probe; software LIF without a card)
+edition: edge
+name: echOS Edge
+version: 2.1.0
+kernel: shared
+arch: [x86_64]
+font: Liberation Mono
+ram_budget_kb: 16384
+packages:
+  echos-base
+  echos-shell
+  echofetch
+  echos-diag
+  echos-net
+  echos-npu
+  echos-io
+  echos-akida
+mmio:
+  akida-akd1000:
+    pci: "1e7c:bca1"
+    bar: 0
+    size: 0x100000
+    prefer: 0xFED00000
+    note: "PCI reservation. No milliwatt figure without a card on the bench."
+    regs:
+      MAGIC:    0x00
+      POWER_MW: 0x10
+      TEMP_C:   0x14
+      LAT_NS:   0x20
+description: Kernel + Akida PCI probe + in-kernel SNN. No daemons. No offload until a card is present and measured.

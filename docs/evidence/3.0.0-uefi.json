@@ -1,0 +1,586 @@
+{
+  "architecture": "x86_64",
+  "boot_mode": "uefi-multiboot2",
+  "checks": [
+    {
+      "detail": "[portability] generic trees are architecture-neutral (kernel, fs, userland, ui)",
+      "name": "generic_trees_are_portable",
+      "passed": true
+    },
+    {
+      "name": "iso_free_of_echOS_20",
+      "passed": true
+    },
+    {
+      "name": "iso_free_of_EchOS_20",
+      "passed": true
+    },
+    {
+      "name": "iso_free_of_chatbot_name",
+      "passed": true
+    },
+    {
+      "name": "iso_free_of_chatbot_project",
+      "passed": true
+    },
+    {
+      "name": "iso_free_of_weight_modules",
+      "passed": true
+    },
+    {
+      "name": "compiled_identity",
+      "passed": true
+    },
+    {
+      "name": "firmware_reported",
+      "passed": true
+    },
+    {
+      "name": "firmware_config_table",
+      "passed": true
+    },
+    {
+      "name": "boot_services_exited",
+      "passed": true
+    },
+    {
+      "name": "handoff_memory_map",
+      "passed": true
+    },
+    {
+      "name": "handoff_module",
+      "passed": true
+    },
+    {
+      "name": "handoff_acpi",
+      "passed": true
+    },
+    {
+      "name": "boot_gdt",
+      "passed": true
+    },
+    {
+      "name": "boot_memory",
+      "passed": true
+    },
+    {
+      "name": "boot_timer",
+      "passed": true
+    },
+    {
+      "name": "boot_idt",
+      "passed": true
+    },
+    {
+      "name": "boot_seb",
+      "passed": true
+    },
+    {
+      "name": "boot_rxfs",
+      "passed": true
+    },
+    {
+      "name": "boot_shell",
+      "passed": true
+    },
+    {
+      "name": "scheduler self-test (spawn/yield/block/wake)",
+      "passed": true
+    },
+    {
+      "name": "ipc queue self-test",
+      "passed": true
+    },
+    {
+      "name": "event fabric self-test (SPSC ring + Q16.16 LIF + input)",
+      "passed": true
+    },
+    {
+      "name": "AEAD self-test (RFC 8439 KAT)",
+      "passed": true
+    },
+    {
+      "name": "uname",
+      "passed": true
+    },
+    {
+      "name": "help",
+      "passed": true
+    },
+    {
+      "name": "help_free_of_retired_ai",
+      "passed": true
+    },
+    {
+      "name": "write",
+      "passed": true
+    },
+    {
+      "name": "read_written_bytes",
+      "passed": true
+    },
+    {
+      "name": "copy",
+      "passed": true
+    },
+    {
+      "name": "read_copied_bytes",
+      "passed": true
+    },
+    {
+      "name": "rename",
+      "passed": true
+    },
+    {
+      "name": "rename_removed_source",
+      "passed": true
+    },
+    {
+      "name": "read_renamed_bytes",
+      "passed": true
+    },
+    {
+      "name": "delete",
+      "passed": true
+    },
+    {
+      "name": "delete_removed_bytes",
+      "passed": true
+    },
+    {
+      "name": "limit_tasks",
+      "passed": true
+    },
+    {
+      "name": "limit_task_stack",
+      "passed": true
+    },
+    {
+      "name": "limit_seb_ring",
+      "passed": true
+    },
+    {
+      "name": "limit_seb_channels",
+      "passed": true
+    },
+    {
+      "name": "limit_wsp_packet",
+      "passed": true
+    },
+    {
+      "name": "limit_heap_0_wsp_pool",
+      "passed": true
+    },
+    {
+      "name": "limit_devices",
+      "passed": true
+    },
+    {
+      "name": "limit_kmalloc_arena",
+      "passed": true
+    },
+    {
+      "name": "limit_rxfs_files",
+      "passed": true
+    },
+    {
+      "name": "limit_rxfs_file_size",
+      "passed": true
+    },
+    {
+      "name": "limit_rxfs_dirs",
+      "passed": true
+    },
+    {
+      "name": "limit_rxfs_path_depth",
+      "passed": true
+    },
+    {
+      "name": "limit_ramdisk",
+      "passed": true
+    },
+    {
+      "name": "status_firmware_row",
+      "passed": true
+    },
+    {
+      "name": "scheduler_within_declared_limit",
+      "passed": true
+    },
+    {
+      "detail": "Sensor ABI v1   record 64 B fixed: version size type source quality flags seq t_us payload[40]\n  types   time imu position velocity battery distance object link autopilot wsp \n \nIntent ABI v1   record 72 B fixed: version size kind reason confidence flags\n            seq cause_seq cause_source cause_type issued_us deadline_us\n            max_speed_mms max_range_mm x_mm y_mm z_mm\n  kinds   NONE HOLD",
+      "name": "robot_sensor_abi",
+      "passed": true
+    },
+    {
+      "detail": "Sensor ABI v1   record 64 B fixed: version size type source quality flags seq t_us payload[40]\n  types   time imu position velocity battery distance object link autopilot wsp \n \nIntent ABI v1   record 72 B fixed: version size kind reason confidence flags\n            seq cause_seq cause_source cause_type issued_us deadline_us\n            max_speed_mms max_range_mm x_mm y_mm z_mm\n  kinds   NONE HOLD",
+      "name": "robot_intent_abi",
+      "passed": true
+    },
+    {
+      "detail": "Sensor ABI v1   record 64 B fixed: version size type source quality flags seq t_us payload[40]\n  types   time imu position velocity battery distance object link autopilot wsp \n \nIntent ABI v1   record 72 B fixed: version size kind reason confidence flags\n            seq cause_seq cause_source cause_type issued_us deadline_us\n            max_speed_mms max_range_mm x_mm y_mm z_mm\n  kinds   NONE HOLD",
+      "name": "robot_intent_has_no_actuator",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_hold",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_continue",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_approach",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_avoid",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_return_home",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_land",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_abort",
+      "passed": true
+    },
+    {
+      "name": "intent_kind_none",
+      "passed": true
+    },
+    {
+      "detail": "['scenario: injected 61 records through the pipeline', ' ']",
+      "name": "robot_scenario_ran",
+      "passed": true
+    },
+    {
+      "detail": "kmalloc calls 5 -> 5",
+      "name": "robot_zero_allocation_on_path",
+      "passed": true
+    },
+    {
+      "detail": "['sensor->runtime', 'runtime->intents', 'intents->gate', 'gate->autopilot']",
+      "name": "robot_four_queues",
+      "passed": true
+    },
+    {
+      "detail": "['sensor->runtime', 'runtime->intents', 'intents->gate', 'gate->autopilot']",
+      "name": "queue_sensor_to_runtime",
+      "passed": true
+    },
+    {
+      "detail": "['sensor->runtime', 'runtime->intents', 'intents->gate', 'gate->autopilot']",
+      "name": "queue_runtime_to_intents",
+      "passed": true
+    },
+    {
+      "detail": "['sensor->runtime', 'runtime->intents', 'intents->gate', 'gate->autopilot']",
+      "name": "queue_intents_to_gate",
+      "passed": true
+    },
+    {
+      "detail": "['sensor->runtime', 'runtime->intents', 'intents->gate', 'gate->autopilot']",
+      "name": "queue_gate_to_autopilot",
+      "passed": true
+    },
+    {
+      "detail": "high 32 of cap 32",
+      "name": "queue_high_water_measured",
+      "passed": true
+    },
+    {
+      "detail": "drops 8",
+      "name": "queue_drops_counted",
+      "passed": true
+    },
+    {
+      "detail": "in 50 out 50",
+      "name": "queue_conservation",
+      "passed": true
+    },
+    {
+      "detail": "('16', '1', '48', '48', '0', '1')",
+      "name": "queue_expiry_counted",
+      "passed": true
+    },
+    {
+      "detail": "48 != 43+4+1",
+      "name": "gate_saw_everything",
+      "passed": true
+    },
+    {
+      "detail": "accepted 43",
+      "name": "gate_accepted_some",
+      "passed": true
+    },
+    {
+      "detail": "modified 4",
+      "name": "gate_modified_some",
+      "passed": true
+    },
+    {
+      "detail": "blocked 1",
+      "name": "gate_blocked_some",
+      "passed": true
+    },
+    {
+      "detail": " expired=1 battery=3 limit=1",
+      "name": "gate_reason_expired",
+      "passed": true
+    },
+    {
+      "detail": " expired=1 battery=3 limit=1",
+      "name": "gate_reason_battery",
+      "passed": true
+    },
+    {
+      "detail": " expired=1 battery=3 limit=1",
+      "name": "gate_reason_limit",
+      "passed": true
+    },
+    {
+      "detail": " HOLD=1 CONTINUE=41 AVOID=1 RETURN_HOME=2 LAND=2",
+      "name": "gate_degraded_to_return_home",
+      "passed": true
+    },
+    {
+      "detail": " HOLD=1 CONTINUE=41 AVOID=1 RETURN_HOME=2 LAND=2",
+      "name": "gate_degraded_to_land",
+      "passed": true
+    },
+    {
+      "detail": " HOLD=1 CONTINUE=41 AVOID=1 RETURN_HOME=2 LAND=2",
+      "name": "gate_degraded_to_hold",
+      "passed": true
+    },
+    {
+      "detail": "scenario: injected 61 records through the pipeline\n \npipeline  sensors -> runtime -> intents -> gate -> autopilot\n \n  sensor->runtime     cap 32   depth 0    high 32   in 50    out 50    drops 8    expired 0\n  runtime->intents    cap 16   depth 0    high 1    in 46    out 46    drops 0    expired 0\n  intents->gate       cap 16   depth 0    high 1    in 48    out 48    drops 0    expired 1\n  gate->",
+      "name": "latency_measured",
+      "passed": true
+    },
+    {
+      "detail": "47 samples",
+      "name": "latency_samples",
+      "passed": true
+    },
+    {
+      "detail": "min 4 us \u2014 a pipeline that always measures 0 is measuring itself",
+      "name": "latency_is_not_zero",
+      "passed": true
+    },
+    {
+      "detail": "p50 63 p95 127 p99 127",
+      "name": "latency_ordered",
+      "passed": true
+    },
+    {
+      "detail": "p50 63 max 111",
+      "name": "latency_bounded_by_max",
+      "passed": true
+    },
+    {
+      "detail": "scenario: injected 61 records through the pipeline\n \npipeline  sensors -> runtime -> intents -> gate -> autopilot\n \n  sensor->runtime     cap 32   depth 0    high 32   in 50    out 50    drops 8    expired 0\n  runtime->intents    cap 16   depth 0    high 1    in 46    out 46    drops 0    expired 0\n  intents->gate       cap 16   depth 0    high 1    in 48    out 48    drops 0    expired 1\n  gate->",
+      "name": "clock_is_calibrated",
+      "passed": true
+    },
+    {
+      "detail": "['JetBrains Mono  10x22 px cell, 1870 glyphs, 4-bit antialiased', 'console 127x32 cells, scrollback 182 rows']",
+      "name": "font_face",
+      "passed": true
+    },
+    {
+      "detail": "JetBrains Mono  10x22 px cell, 1870 glyphs, 4-bit antialiased\nconsole 127x32 cells, scrollback 182 rows\n \n  regular   ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold      ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  italic    ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold+it   ABCDEFGHIJKLM abcdefghijklm 0123456789\n \n  acentos   \u00e1\u00e9\u00ed\u00f3\u00fa \u00e0\u00e8\u00ec\u00f2\u00f9 \u00e2\u00ea\u00ee\u00f4\u00fb \u00e4\u00eb\u00ef\u00f6\u00fc \u00f1\u00d1 \u00e7\u00c7 \u00bf? \u00a1! \u00ba\u00aa \u00df",
+      "name": "font_cell",
+      "passed": true
+    },
+    {
+      "detail": "JetBrains Mono  10x22 px cell, 1870 glyphs, 4-bit antialiased\nconsole 127x32 cells, scrollback 182 rows\n \n  regular   ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold      ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  italic    ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold+it   ABCDEFGHIJKLM abcdefghijklm 0123456789\n \n  acentos   \u00e1\u00e9\u00ed\u00f3\u00fa \u00e0\u00e8\u00ec\u00f2\u00f9 \u00e2\u00ea\u00ee\u00f4\u00fb \u00e4\u00eb\u00ef\u00f6\u00fc \u00f1\u00d1 \u00e7\u00c7 \u00bf? \u00a1! \u00ba\u00aa \u00df",
+      "name": "font_antialiased",
+      "passed": true
+    },
+    {
+      "detail": "JetBrains Mono  10x22 px cell, 1870 glyphs, 4-bit antialiased\nconsole 127x32 cells, scrollback 182 rows\n \n  regular   ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold      ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  italic    ABCDEFGHIJKLM abcdefghijklm 0123456789 {}[]()<>/\\|\n  bold+it   ABCDEFGHIJKLM abcdefghijklm 0123456789\n \n  acentos   \u00e1\u00e9\u00ed\u00f3\u00fa \u00e0\u00e8\u00ec\u00f2\u00f9 \u00e2\u00ea\u00ee\u00f4\u00fb \u00e4\u00eb\u00ef\u00f6\u00fc \u00f1\u00d1 \u00e7\u00c7 \u00bf? \u00a1! \u00ba\u00aa \u00df",
+      "name": "font_glyph_count",
+      "passed": true
+    },
+    {
+      "detail": "n with tilde: U+00F1  drawable  ink 9129",
+      "name": "glyph_00F1",
+      "passed": true
+    },
+    {
+      "detail": "euro: U+20AC  drawable  ink 10251",
+      "name": "glyph_20AC",
+      "passed": true
+    },
+    {
+      "detail": "box drawing rule: U+2500  drawable  ink 4726",
+      "name": "glyph_2500",
+      "passed": true
+    },
+    {
+      "detail": "full block: U+2588  drawable  ink 51408",
+      "name": "glyph_2588",
+      "passed": true
+    },
+    {
+      "detail": "right arrow: U+2192  drawable  ink 5457",
+      "name": "glyph_2192",
+      "passed": true
+    },
+    {
+      "detail": "pi: U+03C0  drawable  ink 8381",
+      "name": "glyph_03C0",
+      "passed": true
+    },
+    {
+      "detail": "check mark: U+2713  drawable  ink 4284",
+      "name": "glyph_2713",
+      "passed": true
+    },
+    {
+      "detail": "braille, all eight dots: U+28FF  drawable  ink 18088",
+      "name": "glyph_28FF",
+      "passed": true
+    },
+    {
+      "detail": "replacement: U+FFFD  drawable  ink 15929",
+      "name": "glyph_FFFD",
+      "passed": true
+    },
+    {
+      "detail": "U+0041  drawable  ink 9741  bold own  italic own",
+      "name": "font_bold_is_its_own_face",
+      "passed": true
+    },
+    {
+      "detail": "U+0041  drawable  ink 9741  bold own  italic own",
+      "name": "font_italic_is_its_own_face",
+      "passed": true
+    },
+    {
+      "detail": "panes  1 of 4   focused #0\n  > #0  127x32  shell output\nscroll  0 back of 188 rows   monitor refreshes 0\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shell output\n \nOne shell task w",
+      "name": "scroll_starts_at_live",
+      "passed": true
+    },
+    {
+      "detail": "panes  1 of 4   focused #0\n  > #0  127x32  shell output\nscroll  0 back of 188 rows   monitor refreshes 0\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shell output\n \nOne shell task w",
+      "name": "scrollback_has_history",
+      "passed": true
+    },
+    {
+      "detail": "scrolled: now 6 rows back of 201 (typing returns to the live tail)",
+      "name": "scroll_moves_back",
+      "passed": true
+    },
+    {
+      "detail": "panes  1 of 4   focused #0\n  > #0  127x32  shell output\nscroll  0 back of 203 rows   monitor refreshes 0\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shell output\n \nOne shell task w",
+      "name": "typing_returns_to_live",
+      "passed": true
+    },
+    {
+      "detail": "scrolled: now 0 rows back of 216 (typing returns to the live tail)",
+      "name": "scroll_down_clamps_at_live",
+      "passed": true
+    },
+    {
+      "detail": "panes  2 of 4   focused #0\n  > #0  63x32  shell output\n    #1  63x32  shell output\nscroll  0 back of 219 rows   monitor refreshes 0\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shel",
+      "name": "pane_split",
+      "passed": true
+    },
+    {
+      "detail": "panes  2 of 4   focused #0\n  > #0  63x32  shell output\n    #1  63x32  shell output\nscroll  0 back of 219 rows   monitor refreshes 0\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shel",
+      "name": "pane_geometry_halved",
+      "passed": true
+    },
+    {
+      "detail": "1 -> 2",
+      "name": "monitor_pane_keeps_refreshing",
+      "passed": true
+    },
+    {
+      "detail": "panes  1 of 4   focused #1\n  > #1  127x32  shell output\nscroll  0 back of 0 rows   monitor refreshes 2\n \n  pane split     side by side      pane vsplit   stacked\n  pane next      Ctrl+Tab too      pane close    give the space back\n  pane scroll up|down [rows]           PgUp / wheel do the same\n  pane monitor   live system card in this pane\n  pane shell     back to shell output\n \nOne shell task wri",
+      "name": "pane_close",
+      "passed": true
+    },
+    {
+      "name": "wsp_frame_round_trip",
+      "passed": true
+    },
+    {
+      "name": "snn_backend_is_software",
+      "passed": true
+    },
+    {
+      "name": "akida_not_claimed_active",
+      "passed": true
+    },
+    {
+      "name": "no_offload_claimed",
+      "passed": true
+    },
+    {
+      "name": "nic_enumerated",
+      "passed": true
+    },
+    {
+      "name": "nic_bound",
+      "passed": true
+    },
+    {
+      "name": "nic_link_up",
+      "passed": true
+    },
+    {
+      "name": "nic_mac_read_from_device",
+      "passed": true
+    },
+    {
+      "name": "nic_ipv4_leased",
+      "passed": true
+    },
+    {
+      "name": "http_round_trip",
+      "passed": true
+    },
+    {
+      "name": "retired_command_unknown_navi",
+      "passed": true
+    },
+    {
+      "name": "retired_command_unknown_navi2",
+      "passed": true
+    },
+    {
+      "name": "retired_command_unknown_monad",
+      "passed": true
+    },
+    {
+      "name": "halt",
+      "passed": true
+    },
+    {
+      "name": "no_guest_failure",
+      "passed": true
+    },
+    {
+      "name": "session_free_of_retired_version",
+      "passed": true
+    },
+    {
+      "name": "session_free_of_retired_ai",
+      "passed": true
+    }
+  ],
+  "edition": "universal",
+  "green": true,
+  "iso_sha256": "de1caf066e4dedd5f41c663677af9911813960f6d3f4ecab57f42481ef97d556",
+  "phase": "CERT-21",
+  "version": "3.0.0"
+}

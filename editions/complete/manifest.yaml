@@ -1,0 +1,31 @@
+# EchOS Complete Edition manifest
+# Everything on: desktop, ECHO (Navi 10), IDE, SDK toolchain.
+
+name: "EchOS Complete"
+edition: complete
+version: 1.0.0
+kernel_flags: ["-DECHOS_EDITION_COMPLETE=1"]
+
+desktop:
+  shell: eclipse-shell        # window server + macOS-style dock
+  theme: eclipse-dark         # flat/metal, dark/black, Eclipse wallpaper
+  interactions:
+    - global-drag-and-drop    # desktop icons, dock, files
+    - global-context-menu     # right-click on ANY item: delete/rename/properties/pin-to-dock
+
+apps:
+  - browser          # Rogex Nova — proprietary engine (HTML/CSS/JS from scratch)
+  - media-viewer     # native video pipeline + image codecs
+  - ide              # EchOS IDE: C, Rust, ASM, Python, HTML, JS, CSS; asm/debug/compiler
+  - terminal         # ROSH
+  - explorer
+  - settings
+  - echo             # ECHO assistant front-end backed by Navi 10
+
+ai:
+  engine: navi10
+  models: [echo-lang, echo-code, echo-sys]
+  backends: [cpu-avx2, cpu-avx512, npu-akida]
+
+packages:
+  channel: core            # packages/ ships in-image

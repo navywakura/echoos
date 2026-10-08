@@ -1,0 +1,18 @@
+# Cross-compile the core for the freestanding, OS-less x86_64 target by
+# default. This matches the C kernel's ABI (no red zone, no SIMD until we
+# manage that state ourselves).
+[build]
+target = "x86_64-unknown-none"
+
+[target.x86_64-unknown-none]
+# Note: x86_64-unknown-none already implies soft-float and disables SSE/MMX in
+# its target spec, so we don't re-specify those target-features here.
+rustflags = [
+    "-C", "code-model=kernel",
+    "-C", "relocation-model=static",
+    "-C", "force-frame-pointers=yes",
+]
+
+# If you ever need to rebuild core for a custom target JSON instead of the
+# built-in target, add:  build-std = ["core", "compiler_builtins"]
+# under [unstable] on a nightly toolchain.
